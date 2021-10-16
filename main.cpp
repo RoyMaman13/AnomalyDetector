@@ -27,7 +27,7 @@ int main(){
 
 	for(int i=0;i<7;i++)
 		if(wrong(v[i],e[i]))
-			cout<<"error for check "<<i<<" (-14)"<<endl;
+			std::cout<<v[i]<<" "<<e[i]<<" error for check "<<i<<" (-14)"<<endl;
 
 
 	for(int i=0;i<N;i++)
