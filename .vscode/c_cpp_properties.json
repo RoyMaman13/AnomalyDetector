@@ -1,4 +1,24 @@
 {
+<<<<<<< HEAD
+  "configurations": [
+    {
+      "name": "linux-gcc-x64",
+      "includePath": [
+        "${workspaceFolder}/**"
+      ],
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "${default}",
+      "cppStandard": "${default}",
+      "intelliSenseMode": "linux-gcc-x64",
+      "compilerArgs": [
+        "-Wall",
+        "-Wextra",
+        "-Wpedantic"
+      ]
+    }
+  ],
+  "version": 4
+=======
     "configurations": [
         {
             "name": "linux-gcc-x64",
@@ -27,4 +47,5 @@
         }
     ],
     "version": 4
+>>>>>>> 32b84f37d32f35cdf4a30a57e53e0fb7fdb2e0e4
 }
