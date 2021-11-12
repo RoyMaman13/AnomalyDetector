@@ -57,10 +57,10 @@ RM = /snap/clion/169/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/CLionProjects/ass1
+CMAKE_SOURCE_DIR = "/home/ubuntu/Advanced Programming"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/CLionProjects/ass1/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/ubuntu/Advanced Programming/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/CLionProjects/ass1/cmake-build-debug/CMakeFiles /home/ubuntu/CLionProjects/ass1/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/ubuntu/Advanced Programming/cmake-build-debug/CMakeFiles" "/home/ubuntu/Advanced Programming/cmake-build-debug//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/CLionProjects/ass1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/ubuntu/Advanced Programming/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -129,6 +129,54 @@ ass1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/build
 .PHONY : ass1/fast
 
+MainTrain.o: MainTrain.cpp.o
+.PHONY : MainTrain.o
+
+# target to build an object file
+MainTrain.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/MainTrain.cpp.o
+.PHONY : MainTrain.cpp.o
+
+MainTrain.i: MainTrain.cpp.i
+.PHONY : MainTrain.i
+
+# target to preprocess a source file
+MainTrain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/MainTrain.cpp.i
+.PHONY : MainTrain.cpp.i
+
+MainTrain.s: MainTrain.cpp.s
+.PHONY : MainTrain.s
+
+# target to generate assembly for a file
+MainTrain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/MainTrain.cpp.s
+.PHONY : MainTrain.cpp.s
+
+SimpleAnomalyDetector.o: SimpleAnomalyDetector.cpp.o
+.PHONY : SimpleAnomalyDetector.o
+
+# target to build an object file
+SimpleAnomalyDetector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.o
+.PHONY : SimpleAnomalyDetector.cpp.o
+
+SimpleAnomalyDetector.i: SimpleAnomalyDetector.cpp.i
+.PHONY : SimpleAnomalyDetector.i
+
+# target to preprocess a source file
+SimpleAnomalyDetector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.i
+.PHONY : SimpleAnomalyDetector.cpp.i
+
+SimpleAnomalyDetector.s: SimpleAnomalyDetector.cpp.s
+.PHONY : SimpleAnomalyDetector.s
+
+# target to generate assembly for a file
+SimpleAnomalyDetector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.s
+.PHONY : SimpleAnomalyDetector.cpp.s
+
 anomaly_detection_util.o: anomaly_detection_util.cpp.o
 .PHONY : anomaly_detection_util.o
 
@@ -153,29 +201,29 @@ anomaly_detection_util.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/anomaly_detection_util.cpp.s
 .PHONY : anomaly_detection_util.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+timeseries.o: timeseries.cpp.o
+.PHONY : timeseries.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/main.cpp.o
-.PHONY : main.cpp.o
+timeseries.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/timeseries.cpp.o
+.PHONY : timeseries.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+timeseries.i: timeseries.cpp.i
+.PHONY : timeseries.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/main.cpp.i
-.PHONY : main.cpp.i
+timeseries.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/timeseries.cpp.i
+.PHONY : timeseries.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+timeseries.s: timeseries.cpp.s
+.PHONY : timeseries.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/main.cpp.s
-.PHONY : main.cpp.s
+timeseries.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ass1.dir/build.make CMakeFiles/ass1.dir/timeseries.cpp.s
+.PHONY : timeseries.cpp.s
 
 # Help Target
 help:
@@ -186,12 +234,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ass1"
+	@echo "... MainTrain.o"
+	@echo "... MainTrain.i"
+	@echo "... MainTrain.s"
+	@echo "... SimpleAnomalyDetector.o"
+	@echo "... SimpleAnomalyDetector.i"
+	@echo "... SimpleAnomalyDetector.s"
 	@echo "... anomaly_detection_util.o"
 	@echo "... anomaly_detection_util.i"
 	@echo "... anomaly_detection_util.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... timeseries.o"
+	@echo "... timeseries.i"
+	@echo "... timeseries.s"
 .PHONY : help
 
 

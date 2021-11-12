@@ -6,11 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/CLionProjects/ass1/anomaly_detection_util.h
+/home/ubuntu/Advanced Programming/anomaly_detection_util.cpp
+math.h
+-
+anomaly_detection_util.h
+/home/ubuntu/Advanced Programming/anomaly_detection_util.h
 
-/home/ubuntu/CLionProjects/ass1/main.cpp
+/home/ubuntu/Advanced Programming/anomaly_detection_util.h
+
+/home/ubuntu/Advanced Programming/main.cpp
 iostream
 -
 anomaly_detection_util.h
-/home/ubuntu/CLionProjects/ass1/anomaly_detection_util.h
+/home/ubuntu/Advanced Programming/anomaly_detection_util.h
 

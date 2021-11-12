@@ -53,10 +53,10 @@ RM = /snap/clion/169/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/CLionProjects/ass1
+CMAKE_SOURCE_DIR = "/home/ubuntu/Advanced Programming"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/CLionProjects/ass1/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/ubuntu/Advanced Programming/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ass1.dir/depend.make
@@ -68,43 +68,73 @@ include CMakeFiles/ass1.dir/flags.make
 
 CMakeFiles/ass1.dir/anomaly_detection_util.cpp.o: CMakeFiles/ass1.dir/flags.make
 CMakeFiles/ass1.dir/anomaly_detection_util.cpp.o: ../anomaly_detection_util.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/CLionProjects/ass1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ass1.dir/anomaly_detection_util.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ass1.dir/anomaly_detection_util.cpp.o -c /home/ubuntu/CLionProjects/ass1/anomaly_detection_util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ubuntu/Advanced Programming/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ass1.dir/anomaly_detection_util.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ass1.dir/anomaly_detection_util.cpp.o -c "/home/ubuntu/Advanced Programming/anomaly_detection_util.cpp"
 
 CMakeFiles/ass1.dir/anomaly_detection_util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ass1.dir/anomaly_detection_util.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/CLionProjects/ass1/anomaly_detection_util.cpp > CMakeFiles/ass1.dir/anomaly_detection_util.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ubuntu/Advanced Programming/anomaly_detection_util.cpp" > CMakeFiles/ass1.dir/anomaly_detection_util.cpp.i
 
 CMakeFiles/ass1.dir/anomaly_detection_util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ass1.dir/anomaly_detection_util.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/CLionProjects/ass1/anomaly_detection_util.cpp -o CMakeFiles/ass1.dir/anomaly_detection_util.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ubuntu/Advanced Programming/anomaly_detection_util.cpp" -o CMakeFiles/ass1.dir/anomaly_detection_util.cpp.s
 
-CMakeFiles/ass1.dir/main.cpp.o: CMakeFiles/ass1.dir/flags.make
-CMakeFiles/ass1.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/CLionProjects/ass1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ass1.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ass1.dir/main.cpp.o -c /home/ubuntu/CLionProjects/ass1/main.cpp
+CMakeFiles/ass1.dir/MainTrain.cpp.o: CMakeFiles/ass1.dir/flags.make
+CMakeFiles/ass1.dir/MainTrain.cpp.o: ../MainTrain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ubuntu/Advanced Programming/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ass1.dir/MainTrain.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ass1.dir/MainTrain.cpp.o -c "/home/ubuntu/Advanced Programming/MainTrain.cpp"
 
-CMakeFiles/ass1.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ass1.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/CLionProjects/ass1/main.cpp > CMakeFiles/ass1.dir/main.cpp.i
+CMakeFiles/ass1.dir/MainTrain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ass1.dir/MainTrain.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ubuntu/Advanced Programming/MainTrain.cpp" > CMakeFiles/ass1.dir/MainTrain.cpp.i
 
-CMakeFiles/ass1.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ass1.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/CLionProjects/ass1/main.cpp -o CMakeFiles/ass1.dir/main.cpp.s
+CMakeFiles/ass1.dir/MainTrain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ass1.dir/MainTrain.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ubuntu/Advanced Programming/MainTrain.cpp" -o CMakeFiles/ass1.dir/MainTrain.cpp.s
+
+CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.o: CMakeFiles/ass1.dir/flags.make
+CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.o: ../SimpleAnomalyDetector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ubuntu/Advanced Programming/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.o -c "/home/ubuntu/Advanced Programming/SimpleAnomalyDetector.cpp"
+
+CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ubuntu/Advanced Programming/SimpleAnomalyDetector.cpp" > CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.i
+
+CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ubuntu/Advanced Programming/SimpleAnomalyDetector.cpp" -o CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.s
+
+CMakeFiles/ass1.dir/timeseries.cpp.o: CMakeFiles/ass1.dir/flags.make
+CMakeFiles/ass1.dir/timeseries.cpp.o: ../timeseries.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ubuntu/Advanced Programming/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ass1.dir/timeseries.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ass1.dir/timeseries.cpp.o -c "/home/ubuntu/Advanced Programming/timeseries.cpp"
+
+CMakeFiles/ass1.dir/timeseries.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ass1.dir/timeseries.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ubuntu/Advanced Programming/timeseries.cpp" > CMakeFiles/ass1.dir/timeseries.cpp.i
+
+CMakeFiles/ass1.dir/timeseries.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ass1.dir/timeseries.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ubuntu/Advanced Programming/timeseries.cpp" -o CMakeFiles/ass1.dir/timeseries.cpp.s
 
 # Object files for target ass1
 ass1_OBJECTS = \
 "CMakeFiles/ass1.dir/anomaly_detection_util.cpp.o" \
-"CMakeFiles/ass1.dir/main.cpp.o"
+"CMakeFiles/ass1.dir/MainTrain.cpp.o" \
+"CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.o" \
+"CMakeFiles/ass1.dir/timeseries.cpp.o"
 
 # External object files for target ass1
 ass1_EXTERNAL_OBJECTS =
 
 ass1: CMakeFiles/ass1.dir/anomaly_detection_util.cpp.o
-ass1: CMakeFiles/ass1.dir/main.cpp.o
+ass1: CMakeFiles/ass1.dir/MainTrain.cpp.o
+ass1: CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.o
+ass1: CMakeFiles/ass1.dir/timeseries.cpp.o
 ass1: CMakeFiles/ass1.dir/build.make
 ass1: CMakeFiles/ass1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/CLionProjects/ass1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ass1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/ubuntu/Advanced Programming/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ass1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ass1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -116,6 +146,6 @@ CMakeFiles/ass1.dir/clean:
 .PHONY : CMakeFiles/ass1.dir/clean
 
 CMakeFiles/ass1.dir/depend:
-	cd /home/ubuntu/CLionProjects/ass1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/CLionProjects/ass1 /home/ubuntu/CLionProjects/ass1 /home/ubuntu/CLionProjects/ass1/cmake-build-debug /home/ubuntu/CLionProjects/ass1/cmake-build-debug /home/ubuntu/CLionProjects/ass1/cmake-build-debug/CMakeFiles/ass1.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/home/ubuntu/Advanced Programming/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/ubuntu/Advanced Programming" "/home/ubuntu/Advanced Programming" "/home/ubuntu/Advanced Programming/cmake-build-debug" "/home/ubuntu/Advanced Programming/cmake-build-debug" "/home/ubuntu/Advanced Programming/cmake-build-debug/CMakeFiles/ass1.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/ass1.dir/depend
 

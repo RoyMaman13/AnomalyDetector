@@ -1,4 +1,9 @@
-
+/*
+ * anomaly_detection_util.h
+ *
+ * Author: 206312654 Roy Maman
+ *         316099548 Yonatan Lahav
+ */
 #ifndef ANOMALYDETECTORUTIL_H_
 #define ANOMALYDETECTORUTIL_H_
 
@@ -18,7 +23,7 @@ float pearson(float* x, float* y, int size);
 class Line{
 public:
 	float a,b;
-	Line():a(0),b(0){}
+	Line():a(0),b(0){};
 	Line(float a, float b):a(a),b(b){}
 	float f(float x){
 		return a*x+b;

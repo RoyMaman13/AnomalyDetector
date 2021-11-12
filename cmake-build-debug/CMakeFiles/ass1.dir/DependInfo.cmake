@@ -8,8 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ubuntu/CLionProjects/ass1/anomaly_detection_util.cpp" "/home/ubuntu/CLionProjects/ass1/cmake-build-debug/CMakeFiles/ass1.dir/anomaly_detection_util.cpp.o"
-  "/home/ubuntu/CLionProjects/ass1/main.cpp" "/home/ubuntu/CLionProjects/ass1/cmake-build-debug/CMakeFiles/ass1.dir/main.cpp.o"
+  "/home/ubuntu/Advanced Programming/MainTrain.cpp" "/home/ubuntu/Advanced Programming/cmake-build-debug/CMakeFiles/ass1.dir/MainTrain.cpp.o"
+  "/home/ubuntu/Advanced Programming/SimpleAnomalyDetector.cpp" "/home/ubuntu/Advanced Programming/cmake-build-debug/CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.o"
+  "/home/ubuntu/Advanced Programming/anomaly_detection_util.cpp" "/home/ubuntu/Advanced Programming/cmake-build-debug/CMakeFiles/ass1.dir/anomaly_detection_util.cpp.o"
+  "/home/ubuntu/Advanced Programming/timeseries.cpp" "/home/ubuntu/Advanced Programming/cmake-build-debug/CMakeFiles/ass1.dir/timeseries.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
