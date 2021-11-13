@@ -14,18 +14,22 @@
 using namespace std;
 
 class TimeSeries {
-
-private:
     //Map with the data from the csv.
     map<string, vector<string>> dataMap;
     //Vector with the features of the csv.
     vector<string> featuresVector;
     //Features amount.
-    unsigned int rowSize;
+    unsigned int rowsAmount;
 public:
-    //Constructor.
     explicit TimeSeries(const char *CSVfileName);
-    ~TimeSeries()= default;
+
+    ~TimeSeries() = default;
+
+    const vector<string> &getFeatures() const;
+
+    const vector<string> &getFeatureValues(const string &feature) const;
+
+    unsigned getRowSize() const;
 };
 
 
