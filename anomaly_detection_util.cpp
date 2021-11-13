@@ -6,7 +6,10 @@
  */
 
 #include <math.h>
+#include <vector>
 #include "anomaly_detection_util.h"
+
+using namespace std;
 
 float avg(float *x, int size)
 {
@@ -59,6 +62,20 @@ float pearson(float *x, float *y, int size)
 
 // performs a linear regression and returns the line equation
 Line linear_reg(Point **points, int size)
+{
+    float x[size];
+    float y[size];
+    for (int i = 0; i < size; i++)
+    {
+        x[i] = points[i]->x;
+        y[i] = points[i]->y;
+    }
+    float a = cov(x, y, size) / var(x, size);
+    float b = avg(y, size) - a * avg(x, size);
+    return Line(a, b);
+}
+
+Line linear_reg(vector<Point*> points, int size)
 {
     float x[size];
     float y[size];

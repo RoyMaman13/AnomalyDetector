@@ -38,6 +38,7 @@ public:
         return cf;
     }
 
+    float calculateThreshold(Line lineReg, vector<Point *> &pointsVector, size_t size);
 };
 
 
