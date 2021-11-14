@@ -1,0 +1,48 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubuntu/Advanced Programming/AnomalyDetector.h
+string
+-
+vector
+-
+timeseries.h
+/home/ubuntu/Advanced Programming/timeseries.h
+math.h
+/home/ubuntu/Advanced Programming/math.h
+
+/home/ubuntu/Advanced Programming/SimpleAnomalyDetector.cpp
+SimpleAnomalyDetector.h
+/home/ubuntu/Advanced Programming/SimpleAnomalyDetector.h
+anomaly_detection_util.h
+/home/ubuntu/Advanced Programming/anomaly_detection_util.h
+
+/home/ubuntu/Advanced Programming/SimpleAnomalyDetector.h
+anomaly_detection_util.h
+/home/ubuntu/Advanced Programming/anomaly_detection_util.h
+AnomalyDetector.h
+/home/ubuntu/Advanced Programming/AnomalyDetector.h
+vector
+-
+algorithm
+-
+string.h
+-
+math.h
+-
+
+/home/ubuntu/Advanced Programming/anomaly_detection_util.h
+vector
+-
+
+/home/ubuntu/Advanced Programming/timeseries.h
+map
+-
+vector
+-
+
