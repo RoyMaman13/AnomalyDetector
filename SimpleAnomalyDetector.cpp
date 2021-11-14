@@ -51,6 +51,8 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
             correlatedFeature.threshold =
                     calculateThreshold(correlatedFeature.lin_reg, pointsVector, ts.getRowSize()) * 1.1;
             this->cf.push_back(correlatedFeature);
+            for (Point *point:pointsVector)
+                delete point;
         }
     }
 }
