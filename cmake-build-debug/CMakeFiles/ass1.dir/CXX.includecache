@@ -13,6 +13,16 @@ vector
 /home/ubuntu/Advanced Programming/minCircle.cpp
 minCircle.h
 /home/ubuntu/Advanced Programming/minCircle.h
+algorithm
+-
+vector
+-
+iostream
+-
+cassert
+-
+valarray
+-
 
 /home/ubuntu/Advanced Programming/minCircle.h
 iostream
