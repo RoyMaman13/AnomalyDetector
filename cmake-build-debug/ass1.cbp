@@ -87,6 +87,12 @@
 		<Unit filename="/home/ubuntu/Advanced Programming/AnomalyDetector.h">
 			<Option target="ass1"/>
 		</Unit>
+		<Unit filename="/home/ubuntu/Advanced Programming/HybridAnomalyDetector.cpp">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="/home/ubuntu/Advanced Programming/HybridAnomalyDetector.h">
+			<Option target="ass1"/>
+		</Unit>
 		<Unit filename="/home/ubuntu/Advanced Programming/MainTrain.cpp">
 			<Option target="ass1"/>
 		</Unit>

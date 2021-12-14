@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/home/ubuntu/Advanced Programming/MainTrain.cpp
+iostream
+-
+vector
+-
+stdlib.h
+-
+time.h
+-
+math.h
+-
+minCircle.h
+/home/ubuntu/Advanced Programming/minCircle.h
+chrono
+-
+
 /home/ubuntu/Advanced Programming/anomaly_detection_util.h
 vector
 -
@@ -16,10 +32,6 @@ minCircle.h
 algorithm
 -
 vector
--
-iostream
--
-cassert
 -
 valarray
 -
