@@ -13,4 +13,6 @@ add_executable(ass1
         SimpleAnomalyDetector.cpp
         SimpleAnomalyDetector.h
         timeseries.cpp
-        timeseries.h)
+        timeseries.h
+        minCircle.cpp
+        minCircle.h)

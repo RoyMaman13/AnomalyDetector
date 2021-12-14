@@ -6,43 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/Advanced Programming/AnomalyDetector.h
-string
+/home/ubuntu/Advanced Programming/anomaly_detection_util.h
+vector
+-
+
+/home/ubuntu/Advanced Programming/minCircle.cpp
+minCircle.h
+/home/ubuntu/Advanced Programming/minCircle.h
+
+/home/ubuntu/Advanced Programming/minCircle.h
+iostream
 -
 vector
 -
-timeseries.h
-/home/ubuntu/Advanced Programming/timeseries.h
-math.h
-/home/ubuntu/Advanced Programming/math.h
-
-/home/ubuntu/Advanced Programming/SimpleAnomalyDetector.cpp
-SimpleAnomalyDetector.h
-/home/ubuntu/Advanced Programming/SimpleAnomalyDetector.h
+stdlib.h
+-
+time.h
+-
 anomaly_detection_util.h
 /home/ubuntu/Advanced Programming/anomaly_detection_util.h
-
-/home/ubuntu/Advanced Programming/SimpleAnomalyDetector.h
-anomaly_detection_util.h
-/home/ubuntu/Advanced Programming/anomaly_detection_util.h
-AnomalyDetector.h
-/home/ubuntu/Advanced Programming/AnomalyDetector.h
-vector
--
-algorithm
--
-string.h
--
-math.h
--
-
-/home/ubuntu/Advanced Programming/anomaly_detection_util.h
-vector
--
-
-/home/ubuntu/Advanced Programming/timeseries.h
-map
--
-vector
--
 

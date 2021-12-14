@@ -102,6 +102,12 @@
 		<Unit filename="/home/ubuntu/Advanced Programming/anomaly_detection_util.h">
 			<Option target="ass1"/>
 		</Unit>
+		<Unit filename="/home/ubuntu/Advanced Programming/minCircle.cpp">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="/home/ubuntu/Advanced Programming/minCircle.h">
+			<Option target="ass1"/>
+		</Unit>
 		<Unit filename="/home/ubuntu/Advanced Programming/timeseries.cpp">
 			<Option target="ass1"/>
 		</Unit>
