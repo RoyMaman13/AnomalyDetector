@@ -29,7 +29,7 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
     }
 
     for (i = 0; i < ts.getFeatures().size(); ++i) {
-        float maxPearson = 0.9;
+        float maxPearson = 0.5;
         size_t c = (-1);
         for (j = i + 1; j < ts.getFeatures().size(); ++j) {
             float tempPearson = abs(pearson(array[i], array[j], ts.getRowSize()));
@@ -39,24 +39,38 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
             }
         }
         if (c != (-1)) {
-            correlatedFeatures correlatedFeature;
-            correlatedFeature.feature1 = ts.getFeatures()[i];
-            correlatedFeature.feature2 = ts.getFeatures()[c];
-            correlatedFeature.corrlation = maxPearson;
             vector<Point *> pointsVector;
             for (size_t k = 0; k < ts.getRowSize(); ++k) {
                 pointsVector.push_back(new Point(array[i][k], array[c][k]));
             }
-            correlatedFeature.lin_reg = linear_reg(pointsVector, ts.getRowSize());
-            correlatedFeature.threshold =
-                    calculateThreshold(correlatedFeature.lin_reg, pointsVector, ts.getRowSize()) * 1.1;
-            this->cf.push_back(correlatedFeature);
-            for (Point *point:pointsVector)
+//            correlatedFeatures correlatedFeature;
+//            correlatedFeature.feature1 = ts.getFeatures()[i];
+//            correlatedFeature.feature2 = ts.getFeatures()[c];
+//            correlatedFeature.corrlation = maxPearson;
+//            correlatedFeature.lin_reg = linear_reg(pointsVector, ts.getRowSize());
+//            correlatedFeature.threshold =
+//                    calculateThreshold(correlatedFeature.lin_reg, pointsVector, ts.getRowSize()) * 1.1;
+//            this->cf.push_back(correlatedFeature);
+            insertCF(ts.getFeatures()[i], ts.getFeatures()[c], maxPearson, ts, pointsVector);
+            for (Point *point: pointsVector)
                 delete point;
         }
     }
 }
 
+void SimpleAnomalyDetector::insertCF(string feature1, string feature2, float corrlation, const TimeSeries &ts,
+                                     vector<Point *> &pointsVector) {
+    if (corrlation > 0.9) {
+        correlatedFeatures correlatedFeature;
+        correlatedFeature.feature1 = feature1;
+        correlatedFeature.feature2 = feature2;
+        correlatedFeature.corrlation = corrlation;
+        correlatedFeature.lin_reg = linear_reg(pointsVector, ts.getRowSize());
+        correlatedFeature.threshold =
+                calculateThreshold(correlatedFeature.lin_reg, pointsVector, ts.getRowSize()) * 1.1;
+        this->cf.push_back(correlatedFeature);
+    }
+}
 
 float SimpleAnomalyDetector::calculateThreshold(Line lineReg, vector<Point *> &pointsVector, size_t size) {
     float max = 0;
@@ -68,16 +82,25 @@ float SimpleAnomalyDetector::calculateThreshold(Line lineReg, vector<Point *> &p
     return max;
 }
 
+void SimpleAnomalyDetector::detectHelper(correlatedFeatures &correlatedFeature, string feature1, string feature2,
+                                         vector<AnomalyReport> &anomalyReports, int i) {
+    if (abs(stof(feature2) - correlatedFeature.lin_reg.f(stof(feature1))) > correlatedFeature.threshold) {
+        string description = correlatedFeature.feature1 + "-" + correlatedFeature.feature2;
+        anomalyReports.push_back(AnomalyReport(description, i + 1));
+    }
+}
+
 vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries &ts) {
     vector<AnomalyReport> anomalyReports;
     for (correlatedFeatures correlatedFeature: this->cf) {
         vector<string> feature1 = ts.getFeatureValues(correlatedFeature.feature1);
         vector<string> feature2 = ts.getFeatureValues(correlatedFeature.feature2);
         for (int i = 0; i < feature1.size(); i++) {
-            if (abs(stof(feature2[i]) - correlatedFeature.lin_reg.f(stof(feature1[i]))) > correlatedFeature.threshold) {
-                string description = correlatedFeature.feature1 + "-" + correlatedFeature.feature2;
-                anomalyReports.push_back(AnomalyReport(description,i+1));
-            }
+//            if (abs(stof(feature2[i]) - correlatedFeature.lin_reg.f(stof(feature1[i]))) > correlatedFeature.threshold) {
+//                string description = correlatedFeature.feature1 + "-" + correlatedFeature.feature2;
+//                anomalyReports.push_back(AnomalyReport(description, i + 1));
+            detectHelper(correlatedFeature, feature1[i], feature2[i], anomalyReports, i);
+//            }
         }
     }
     return anomalyReports;

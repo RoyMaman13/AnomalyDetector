@@ -22,6 +22,7 @@ CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.o
  /home/ubuntu/Advanced Programming/SimpleAnomalyDetector.cpp
  /home/ubuntu/Advanced Programming/SimpleAnomalyDetector.h
  /home/ubuntu/Advanced Programming/anomaly_detection_util.h
+ /home/ubuntu/Advanced Programming/minCircle.h
  /home/ubuntu/Advanced Programming/timeseries.h
 CMakeFiles/ass1.dir/anomaly_detection_util.cpp.o
  /home/ubuntu/Advanced Programming/anomaly_detection_util.cpp

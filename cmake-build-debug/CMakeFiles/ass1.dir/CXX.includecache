@@ -26,27 +26,13 @@ SimpleAnomalyDetector.h
 minCircle.h
 /home/ubuntu/Advanced Programming/minCircle.h
 
-/home/ubuntu/Advanced Programming/MainTrain.cpp
-iostream
--
-vector
--
-HybridAnomalyDetector.h
-/home/ubuntu/Advanced Programming/HybridAnomalyDetector.h
-fstream
--
-stdlib.h
--
-time.h
--
-math.h
--
-
 /home/ubuntu/Advanced Programming/SimpleAnomalyDetector.h
 anomaly_detection_util.h
 /home/ubuntu/Advanced Programming/anomaly_detection_util.h
 AnomalyDetector.h
 /home/ubuntu/Advanced Programming/AnomalyDetector.h
+minCircle.h
+/home/ubuntu/Advanced Programming/minCircle.h
 vector
 -
 algorithm

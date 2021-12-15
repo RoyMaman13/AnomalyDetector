@@ -22,6 +22,7 @@ CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.o: \
  ../SimpleAnomalyDetector.cpp \
  ../SimpleAnomalyDetector.h \
  ../anomaly_detection_util.h \
+ ../minCircle.h \
  ../timeseries.h
 CMakeFiles/ass1.dir/anomaly_detection_util.cpp.o: \
  ../anomaly_detection_util.cpp \
