@@ -1,0 +1,4 @@
+/snap/clion/177/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/177/bin/ninja/linux/ninja -G Ninja "/home/ubuntu/Advanced Programming/ex4"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ubuntu/Advanced Programming/ex4/cmake-build-debug
