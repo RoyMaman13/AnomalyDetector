@@ -1,3 +1,0 @@
-/home/ubuntu/CLionProjects/ass1/cmake-build-default/CMakeFiles/rebuild_cache.dir
-/home/ubuntu/CLionProjects/ass1/cmake-build-default/CMakeFiles/edit_cache.dir
-/home/ubuntu/CLionProjects/ass1/cmake-build-default/CMakeFiles/ass1.dir
