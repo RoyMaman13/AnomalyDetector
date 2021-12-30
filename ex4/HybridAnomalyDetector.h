@@ -24,6 +24,7 @@ public:
                               vector<AnomalyReport> &anomalyReports, int i);
 
     float calculateThreshold(Circle mec, vector<Point *> &pointsVector, size_t size);
+
 };
 
 #endif /* HYBRIDANOMALYDETECTOR_H_ */

@@ -21,7 +21,7 @@ void HybridAnomalyDetector::insertCF(string feature1, string feature2, float cor
         i++;
     }
     SimpleAnomalyDetector::insertCF(feature1, feature2, corrlation, ts, pointsVector);
-    if (corrlation > 0.5 && corrlation < 0.9) {
+    if (corrlation > 0.5 && corrlation < this->threshold) {
         correlatedFeatures correlatedFeature;
         correlatedFeature.feature1 = feature1;
         correlatedFeature.feature2 = feature2;
@@ -47,9 +47,9 @@ float HybridAnomalyDetector::calculateThreshold(Circle mec, vector<Point *> &poi
 
 void HybridAnomalyDetector::detectHelper(correlatedFeatures &correlatedFeature, string feature1, string feature2,
                                          vector<AnomalyReport> &anomalyReports, int i) {
-    if (correlatedFeature.corrlation > 0.9)
+    if (correlatedFeature.corrlation > this->threshold)
         SimpleAnomalyDetector::detectHelper(correlatedFeature, feature1, feature2, anomalyReports, i);
-    else if (correlatedFeature.corrlation > 0.5 && correlatedFeature.corrlation < 0.9)
+    else if (correlatedFeature.corrlation > 0.5 && correlatedFeature.corrlation < this->threshold)
         if (abs(dist(Point(stof(feature1), stof(feature2)), correlatedFeature.mec.center) >
                 correlatedFeature.threshold)) {
             string description = correlatedFeature.feature1 + "-" + correlatedFeature.feature2;

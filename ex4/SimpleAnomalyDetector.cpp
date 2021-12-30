@@ -9,6 +9,7 @@
 #include "anomaly_detection_util.h"
 
 SimpleAnomalyDetector::SimpleAnomalyDetector() {
+    this->threshold = 0.9;
 }
 
 SimpleAnomalyDetector::~SimpleAnomalyDetector() {
@@ -60,7 +61,7 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries &ts) {
 
 void SimpleAnomalyDetector::insertCF(string feature1, string feature2, float corrlation, const TimeSeries &ts,
                                      vector<Point *> &pointsVector) {
-    if (corrlation > 0.9) {
+    if (corrlation > this->threshold) {
         correlatedFeatures correlatedFeature;
         correlatedFeature.feature1 = feature1;
         correlatedFeature.feature2 = feature2;
@@ -106,3 +107,6 @@ vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries &ts) {
     return anomalyReports;
 }
 
+void SimpleAnomalyDetector::setThreshold(float newThreshold) {
+    this->threshold = newThreshold;
+}

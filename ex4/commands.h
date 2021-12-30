@@ -8,15 +8,27 @@
 
 #include <fstream>
 #include <vector>
+#include <iomanip>
 #include "HybridAnomalyDetector.h"
 
 using namespace std;
 
+struct reportInterval {
+    string description;
+    long start;
+    long end;
+};
+
 class states {
 public:
     float threshold;
+    vector<AnomalyReport> reports;
+    int rowsNum;
 
-    states() : threshold(0.9) {}
+    states() {
+        this->rowsNum = 0;
+        this->threshold = 0.9;
+    }
 
     void setThreshold(float f) {
         this->threshold = f;
@@ -78,8 +90,10 @@ public:
         while (s != "done") {
             if (textOut.is_open())
                 textOut << s << endl;
+            state->rowsNum++;
             s = dio->read();
         }
+        state->rowsNum--;
         textOut.close();
         dio->write("Upload complete.\n");
     }
@@ -95,6 +109,7 @@ public:
             dio->write("The current correlation threshold is ");
             dio->write(to_string(state->threshold));
             dio->write("\n");
+            dio->write("Type a new threshold\n");
             newThreshold = stof(dio->read());
             if (newThreshold >= 0 && newThreshold <= 1) {
                 state->threshold = newThreshold;
@@ -110,7 +125,13 @@ public:
     detectAnomalies(DefaultIO *dio) : Command(dio, "detect anomalies") {}
 
     virtual void execute(states *state) {
-        dio->write(description);
+        HybridAnomalyDetector hybridAnomalyDetector;
+        TimeSeries learnTs("anomalyTrain.txt");
+        hybridAnomalyDetector.setThreshold(state->threshold);
+        hybridAnomalyDetector.learnNormal(learnTs);
+        TimeSeries testTs("anomalyText.txt");
+        state->reports = hybridAnomalyDetector.detect(testTs);
+        dio->write("anomaly detection complete.\n");
     }
 };
 
@@ -119,7 +140,13 @@ public:
     displayResults(DefaultIO *dio) : Command(dio, "display results") {}
 
     virtual void execute(states *state) {
-        dio->write(description);
+        for (AnomalyReport anomalyReport: state->reports) {
+            dio->write(anomalyReport.timeStep);
+            dio->write("\t");
+            dio->write(anomalyReport.description);
+            dio->write("\n");
+        }
+        dio->write("Done.\n");
     }
 };
 

@@ -28,6 +28,7 @@ struct correlatedFeatures {
 class SimpleAnomalyDetector : public TimeSeriesAnomalyDetector {
 protected:
     vector<correlatedFeatures> cf;
+    float threshold;
 public:
     SimpleAnomalyDetector();
 
@@ -49,6 +50,8 @@ public:
     virtual void
     detectHelper(correlatedFeatures &correlatedFeature, string feature1, string feature2,
                  vector<AnomalyReport> &anomalyReports, int i);
+
+    void setThreshold(float newThreshold);
 };
 
 
