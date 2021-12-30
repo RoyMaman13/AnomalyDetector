@@ -155,7 +155,59 @@ public:
     uploadAnomaliesAnalyzeResults(DefaultIO *dio) : Command(dio, "upload anomalies and analyze results") {}
 
     virtual void execute(states *state) {
-        dio->write(description);
+        vector<reportInterval> intervalVec;
+        for (AnomalyReport anomalyReport: state->reports) {
+            if (intervalVec.empty())
+                intervalVec.push_back(
+                        reportInterval{anomalyReport.description, anomalyReport.timeStep, anomalyReport.timeStep});
+            else if ((anomalyReport.description.compare(intervalVec.at(intervalVec.size() - 1).description) == 0) &&
+                     (anomalyReport.timeStep == (intervalVec.at(intervalVec.size() - 1).end + 1)))
+                intervalVec.at(intervalVec.size() - 1).end++;
+            else
+                intervalVec.push_back(
+                        reportInterval{anomalyReport.description, anomalyReport.timeStep, anomalyReport.timeStep});
+        }
+
+        dio->write("Please upload your local anomalies file.\n");
+        string s = dio->read();
+        vector<reportInterval> intervalResVec;
+        while (s != "done") {
+            int index = s.find(',');
+            intervalResVec.push_back(
+                    reportInterval{"", stol(s.substr(0, index)), stol(s.substr(index + 1, s.size()))});
+            s = dio->read();
+        }
+        int P = intervalResVec.size();
+        int sum = 0;
+        for (int i = 0; i < intervalResVec.size(); i++) {
+            sum += intervalResVec.at(i).end - intervalResVec.at(i).start + 1;
+        }
+        int N = state->rowsNum - sum;
+        int FP = 0;
+        int TP = 0;
+        for (reportInterval report: intervalVec) {
+            bool flag = false;
+            for (reportInterval anomaly: intervalResVec) {
+                if ((report.start <= anomaly.start && report.end >= anomaly.start) ||
+                    (report.start <= anomaly.end && report.end >= anomaly.end) ||
+                    (report.start >= anomaly.start && report.end <= anomaly.end)) {
+                    TP++;
+                    flag = true;
+                }
+            }
+            if (flag == false)
+                FP++;
+        }
+        setprecision(3);
+        dio->write("Upload complete.\n");
+        dio->write("True Positive Rate: ");
+        int tpr = (int) (1000.0 * TP / P);
+        int fpr = (int) (1000.0 * FP / N);
+        dio->write((float) (tpr / 1000.00));
+        dio->write("\n");
+        dio->write("False Positive Rate: ");
+        dio->write((float) (fpr / 1000.00));
+        dio->write("\n");
     }
 };
 
